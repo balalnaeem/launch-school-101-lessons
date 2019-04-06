@@ -42,8 +42,5 @@ def max_toggle(n)
   all_lights.select { |e| e > 0 }
 end
 
-
-# *** TEST CASES ***
-
 p max_toggle(5) #== [1, 4]
 p max_toggle(10) #== [1, 4, 9]
