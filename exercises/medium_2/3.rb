@@ -15,9 +15,9 @@ Al:
 =end
 
 def letter_percentages(string)
-  total_length = string.length
-  lowercase_letters = string.chars.select { |e| e =~ /[a-z]/i && e == e.downcase }.size.to_f
-  uppercase_letters = string.chars.select { |e| e =~ /[a-z]/i && e == e.upcase }.size.to_f
+  total_length = string.length.to_f
+  lowercase_letters = string.chars.select { |e| e =~ /[a-z]/ }.size
+  uppercase_letters = string.chars.select { |e| e =~ /[A-Z]/ }.size
   neither = total_length - (lowercase_letters + uppercase_letters)
   lower_percent = (lowercase_letters/total_length * 100)
   upper_percent = (uppercase_letters/total_length * 100)
